@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clue 1 ☕</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<h1>Clue 1 ☕</h1>
+<p>🧩 "Your adventure starts where beans jump high,<br>
+
+       But not in Brunswick — don’t be shy!<br>
+
+       Cross the river, head west a tad,<br>
+
+       Find the café that’s nimble, and you’ll be glad.<br>
+
+       Latte or cappuccino, your choice to sip,<br>
+
+       Your first clue waits where you take that first sip." 🍹</p>
+<input type="text" id="answer" placeholder="Type your answer here">
+<button onclick="checkAnswer()">Submit</button>
+<p id="feedback"></p>
+</div>
+<script>
+
+    function checkAnswer() {
+
+      const userAnswer = document.getElementById('answer').value.trim().toLowerCase();
+
+      const feedback = document.getElementById('feedback');
+
+      if(userAnswer === "jack b nimble") {
+
+        feedback.innerHTML = '🎉 Yay! Correct! <a href="clue2.html">Go to Clue 2 🌿</a>';
+
+        feedback.style.color = 'green';
+
+      } else {
+
+        feedback.innerHTML = "Oops! Try again 😉";
+
+        feedback.style.color = 'red';
+
+      }
+
+    }
+</script>
+</body>
+</html>
+ 

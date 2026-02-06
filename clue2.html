@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clue 2 🌲</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<h1>Clue 2 🌲</h1>
+<p>🧩 "Next up, we trade coffee for trees,<br>
+
+       And follow the whispers of the breeze.<br>
+
+       Two bridges guide you, waters that twinkle,<br>
+
+       And springs that bubble — make your legs crinkle!<br>
+
+       A loop awaits where the birds sing clear,<br>
+
+       Find your next hint where nature gives a cheer." 🧺</p>
+<input type="text" id="answer" placeholder="Type your answer here">
+<button onclick="checkAnswer()">Submit</button>
+<p id="feedback"></p>
+</div>
+<script>
+
+    function checkAnswer() {
+
+      const userAnswer = document.getElementById('answer').value.trim().toLowerCase();
+
+      const feedback = document.getElementById('feedback');
+
+      if(userAnswer === "twin bridges") {
+
+        feedback.innerHTML = '🌟 You got it! <a href="clue3.html">Go to Clue 3 🧺</a>';
+
+        feedback.style.color = 'green';
+
+      } else {
+
+        feedback.innerHTML = "Not quite, try again! 🌿";
+
+        feedback.style.color = 'red';
+
+      }
+
+    }
+</script>
+</body>
+</html>
+ 
